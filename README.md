@@ -216,6 +216,29 @@ Vivado will automatically load the full design including source files, simulatio
 
 ---
 
+# Running Simulation
+
+The simulation testbench for this project is provided using **SystemVerilog**.
+
+When running simulations in Vivado, make sure to use:
+
+```
+top_sim.sv
+```
+
+and **not**
+
+```
+top_sim.v
+```
+
+The `top_sim.sv` file contains the correct SystemVerilog testbench required for proper simulation of the neural network hardware design.
+
+If `top_sim.v` is used instead, the simulation may not run correctly or may produce incorrect results.
+
+Therefore, always select **`top_sim.sv` as the simulation top module** when running behavioral simulations in Vivado.
+
+
 # Author
 
 **Akhilesh Bharadhwaj S**
